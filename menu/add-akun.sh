@@ -82,6 +82,7 @@ vlesslinkgrpc="vless://${uuid}@${domain}:443?mode=gun&security=tls&encryption=no
 #buattrojan
 trojanlinkgrpc="trojan://${uuid}@${domain}:443?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=bug.com#${user}"
 trojanlinkws="trojan://${uuid}@${domain}:443?path=/xraytrojanws&security=tls&host=bug.com&type=ws&sni=bug.com#${user}"
+
 #buatshadowsocks
 #
 cipher="aes-128-gcm"

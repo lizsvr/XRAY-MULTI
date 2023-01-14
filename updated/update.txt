@@ -31,7 +31,6 @@
 - Menambahkan Tambah Domain Sebelum Install
 - Pemisahan pembuatan akun masing-masing service
 - Penghapusan Akun
-- Auto expired
 - dll
 
 # OS 
@@ -59,29 +58,16 @@ sudo su
 apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
 - Otomatis Akan Reboot/ Hidupkan Ulang
-3. Login Lagi Ke VPS NYA
-4. Masukan Nama Domain Kamu, domain harus aktif
-- contoh nama domain punya aku,silahkan ganti dengan punya kamu
-```
-cat >/root/domain <<EOF
-mantapxsl.my.id
-EOF
-```
-- ganti mantapxsl.my.id menjadi nama domain punya kamu
-```
-mkdir -p /etc/xray
-cat >/etc/xray/domain <<EOF
-mantapxsl.my.id
-EOF
-```
 
-5. Salin kode di bawah ini dan paste kan ke dalam vps punya kamu
+3. Login Lagi Ke VPS NYA
+
+4. Salin kode di bawah ini dan paste kan ke dalam vps punya kamu
 - maka proses install akan berjalan, jangan keluar dari vps
 - jika keluar dari vps saat lagi proses install,maka akan gagal
 ```
 wget https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
-6. jika sudah selesai,lalu ketik xmenu untuk menampilkan menu
+5. jika sudah selesai,lalu ketik xmenu untuk menampilkan menu
 
 ```
 xmenu

@@ -24,15 +24,21 @@ echo "Checking VPS"
 IZIN=$(wget -qO- ipinfo.io/ip);
 clear
 mkdir /var/lib/crot;
+mkdir /etc/xray
 echo "IP=" >> /var/lib/crot/ipvps.conf
+echo "IP=" >> /var/lib/akbarstorevpn/ipvps.conf
 cd
+#
+# Add Domain
+wget https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/updated/adddomain.sh && chmod +x adddomain.sh && ./adddomain.sh
+#
 #install tools/alat
-wget https://raw.githubusercontent.com/fisabiliyusri/XRAY-MANTAP/main/install-tools.sh && chmod +x install-tools.sh && ./install-tools.sh
+wget https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/install-tools.sh && chmod +x install-tools.sh && ./install-tools.sh
 #
 #Instal Xray
-wget https://raw.githubusercontent.com/fisabiliyusri/XRAY-MANTAP/main/install-xray.sh && chmod +x install-xray.sh && ./install-xray.sh
+wget https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/install-xray.sh && chmod +x install-xray.sh && ./install-xray.sh
 #install xmenu
-wget https://raw.githubusercontent.com/fisabiliyusri/XRAY-MANTAP/main/menu/updatedll.sh && chmod +x updatedll.sh && ./updatedll.sh
+wget https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/updatedll.sh && chmod +x updatedll.sh && ./updatedll.sh
 #
 #SELESAI
 echo " "
@@ -81,4 +87,5 @@ rm -rf updatedll.sh
 rm -rf setup.sh
 rm -rf install-xray.sh
 rm -rf install-tools.sh
-
+sleep 1
+reboot
