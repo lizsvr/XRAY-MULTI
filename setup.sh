@@ -42,8 +42,9 @@ wget https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/install-xray.sh &&
 wget https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/updatedll.sh && chmod +x updatedll.sh && ./updatedll.sh
 #
 #SELESAI
+clear
 echo " "
-echo "Installation has been completed!!"echo " "
+echo "Installation has been completed!!"
 echo "============================================================================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "----------------------------------------------------------------------------" | tee -a log-install.txt
@@ -88,5 +89,6 @@ rm -rf updatedll.sh
 rm -rf setup.sh
 rm -rf install-xray.sh
 rm -rf install-tools.sh
+rm -rf adddomain.sh
 sleep 1
 reboot

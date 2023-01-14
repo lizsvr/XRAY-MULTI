@@ -51,6 +51,7 @@ wget -O adddomain "${akbarvpnnn}/adddomain.sh"
 wget -O chngedomain "${akbarvpnnn}/chngedomain.sh"
 wget -O chngeport "${akbarvpnnn}/chngeport.sh"
 wget -O certxray "${akbarvpnnn}/certxray.sh"
+wget -O xp "${akbarvpnnn}/xp.sh"
 
 #
 chmod +x /usr/bin/updatedll
@@ -86,6 +87,6 @@ chmod +x certxray
 chmod +x adddomain
 chmod +x chngedomain
 chmod +x chngeport
-
+chmod +x xp
 
 cd

@@ -73,7 +73,7 @@ rm -rf /etc/nginx/conf.d/alone.conf
 mkdir -p /home/vps/public_html
 
 # set Cron
-echo "0 5 * * * root reboot" >> /etc/crontab
+echo "0 5 * * * root xp && reboot" >> /etc/crontab
 
 # set uuid
 uuid9=$(cat /proc/sys/kernel/random/uuid)
