@@ -23,8 +23,9 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 IZIN=$(wget -qO- ipinfo.io/ip);
 clear
+mkdir /var/lib/akbarstorevpn;
 mkdir /var/lib/crot;
-mkdir /etc/xray
+mkdir /etc/xray;
 echo "IP=" >> /var/lib/crot/ipvps.conf
 echo "IP=" >> /var/lib/akbarstorevpn/ipvps.conf
 cd

@@ -34,7 +34,7 @@ read -p "Select From Options [ 1 - 6 ] : " menu
 echo -e ""
 case $menu in
 1)
-maddssh
+maddxray
 ;;
 2)
 restart-xray
