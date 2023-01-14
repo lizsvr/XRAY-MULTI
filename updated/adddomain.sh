@@ -44,8 +44,10 @@ sleep 3
 cekdomain=$(curl -sm8 http://ipget.net/?ip="${domain1}")
 if [[ ${MYIP} == ${cekdomain} ]]; then
     echo -e "${success}Domain: ${BLUE}${domain1} ${NC}Terhubung dengan IP VPS"
+    sleep 3
 else
     echo -e "${error1}Domain: ${BLUE}${domain1} ${NC}Tidak Terhubung dengan IP VPS"
+    sleep 3
     exit 0
 fi
 # done
