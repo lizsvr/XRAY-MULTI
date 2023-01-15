@@ -1,5 +1,31 @@
 #!/bin/bash
 # ==========================================
+# Color
+RED='\033[0;31m'
+NC='\033[0m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+LIGHT='\033[0;37m'
+# =========================================
+# Getting
+#
+cd
+# collor status
+error1="${RED} [ERROR] ${NC}"
+success="${GREEN} [OK] ${NC}"
+# Cek Domain
+source /var/lib/akbarstorevpn/ipvps.conf
+if [[ "$IP" = "" ]]; then
+    echo -e " ${error1}Gagal Install-Update.."
+    sleep 2
+    exit 0
+else
+    echo -e "${success}Installasi Update Menu..."
+fi
+# ==========================================
 # link hosting kalian
 akbarvpn="https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu"
 akbarvpnn="https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/menu/updated"

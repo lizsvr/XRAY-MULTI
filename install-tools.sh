@@ -9,7 +9,7 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
-# ==========================================
+# =========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 # ==================================================
@@ -18,7 +18,18 @@ akbarvpn="raw.githubusercontent.com/lizsvr/cfnfree/main/ssh"
 
 #
 cd
-
+# collor status
+error1="${RED} [ERROR] ${NC}"
+success="${GREEN} [OK] ${NC}"
+# Cek Domain
+source /var/lib/akbarstorevpn/ipvps.conf
+if [[ "$IP" = "" ]]; then
+    echo -e " ${error1}Gagal Install-tools.."
+    sleep 2
+    exit 0
+else
+    echo -e "${success}Installasi Tolls..."
+fi
 # Edit file /etc/systemd/system/rc-local.service
 cat > /etc/systemd/system/rc-local.service <<-END
 [Unit]
