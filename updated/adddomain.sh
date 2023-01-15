@@ -87,3 +87,4 @@ bash acme.sh --register-account -m senowahyu62@gmail.com
 bash acme.sh --issue --standalone -d $domain1 --force
 bash acme.sh --installcert -d $domain1 --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
 sleep 3
+clear

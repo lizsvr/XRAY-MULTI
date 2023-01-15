@@ -14,12 +14,14 @@ LIGHT='\033[0;37m'
 OK="${GREEN}[OK]${NC}"
 Error="${RED}[Mistake]${NC}"
 clear
-echo -e "Please Wait..."
+echo -e "${OK}Please Wait..."
 systemctl daemon-reload
 systemctl enable xray
 systemctl restart xray
 systemctl restart nginx
 systemctl enable runn
 systemctl restart runn
+clear
+echo "${OK}Xray.service berhasil di restart"
 sleep 3
 menu

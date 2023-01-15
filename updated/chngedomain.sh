@@ -44,8 +44,11 @@ sleep 3
 cekdomain=$(curl -sm8 http://ipget.net/?ip="${domain1}")
 if [[ ${MYIP} == ${cekdomain} ]]; then
     echo -e "${success}Domain: ${BLUE}${domain1} ${NC}Terhubung dengan IP VPS"
+    sleep 3
+    clear
 else
-    echo -e "${error1}Domain: ${BLUE}${domain1} ${NC}Tidak Terhubung dengan IP VPS"
+    echo -e "${error1}Domain: ${RED}${domain1} ${NC}Tidak Terhubung dengan IP VPS"
+    sleep 3
     exit 0
 fi
 # done
@@ -83,3 +86,5 @@ bash acme.sh --register-account -m senowahyu62@gmail.com
 bash acme.sh --issue --standalone -d $domain1 --force
 bash acme.sh --installcert -d $domain1 --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
 sleep 3
+clear
+restart-xray
