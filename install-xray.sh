@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -19,11 +18,14 @@ success="${GREEN} [OK] ${NC}"
 # Cek Domain
 source /var/lib/akbarstorevpn/ipvps.conf
 if [[ "$IP" = "" ]]; then
-    echo -e " ${error1}Gagal Install-Xray.."
-    sleep 2
-    exit 0
+  clear
+  echo -e " ${error1}Gagal Install-Xray.."
+  sleep 2
+  exit 0
 else
-    echo -e "${success}Installasi Xray..."
+  clear
+  echo -e "${success}Installasi Xray..."
+  sleep 2
 fi
 
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')

@@ -48,6 +48,7 @@ success="${GREEN} [OK] ${NC}"
 # Cek Domain
 source /var/lib/akbarstorevpn/ipvps.conf
 if [[ "$IP" = "" ]]; then
+	clear
     echo -e " ${error1}Installation Failed!!"
 	rm -rf updatedll
 	rm -rf updatedll.sh
@@ -57,7 +58,6 @@ if [[ "$IP" = "" ]]; then
 	rm -rf adddomain.sh
 	echo " Reboot 15 Sec"
 	sleep 15
-    exit 0
 	reboot
 else
 	clear

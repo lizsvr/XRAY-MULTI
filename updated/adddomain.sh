@@ -43,9 +43,11 @@ sleep 3
 # Cek DNS terubung dengan VPS atau tidak
 cekdomain=$(curl -sm8 http://ipget.net/?ip="${domain1}")
 if [[ ${MYIP} == ${cekdomain} ]]; then
+    clear
     echo -e "${success}Domain: ${BLUE}${domain1} ${NC}Terhubung dengan IP VPS"
     sleep 3
 else
+    clear
     echo -e "${error1}Domain: ${BLUE}${domain1} ${NC}Tidak Terhubung dengan IP VPS"
     sleep 3
     exit 0

@@ -19,11 +19,14 @@ success="${GREEN} [OK] ${NC}"
 # Cek Domain
 source /var/lib/akbarstorevpn/ipvps.conf
 if [[ "$IP" = "" ]]; then
+    clear
     echo -e " ${error1}Gagal Install-Update.."
     sleep 2
     exit 0
 else
+    clear
     echo -e "${success}Installasi Update Menu..."
+    sleep 2
 fi
 # ==========================================
 # link hosting kalian
