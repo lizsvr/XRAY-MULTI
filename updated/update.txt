@@ -26,11 +26,13 @@
 - VLESS WS         : **80**
 - VLESS GRPC       : **80**
 
-# MOD List
+# MOD List & Updated
 - Pengoptimalan Menu
 - Menambahkan Tambah Domain Sebelum Install
-- Pemisahan pembuatan akun masing-masing service
-- Penghapusan Akun
+- Pemisahan pembuatan dan penghapusan masing-masing akun service
+- penambahan masa aktif/rennew akun
+- fixed auto reboot 05:00 GTM +7 
+- Add auto Expired
 - dll
 
 # OS 
@@ -70,7 +72,7 @@ wget https://raw.githubusercontent.com/lizsvr/XRAY-MULTI/main/setup.sh && chmod 
 5. jika sudah selesai,lalu ketik xmenu untuk menampilkan menu
 
 ```
-xmenu
+menu
 ```
 7. DONE / SELESAI
 
@@ -79,7 +81,7 @@ xmenu
 - jika xray dan nginx mengalami error !
 - ketik
 ```
-certv2ray
+certxray
 ```
 lalu ketik
 ```
@@ -87,7 +89,8 @@ restart-xray
 ```
 
 # INFO KODE SCRIPT
-- xmenu (untuk menampilkan menu
+- xmenu (untuk menampilkan menu original)
+- menu (untuk menampilkan menu mod)
 - updatedll (untuk update sc)
 - restart-xray (hidupkan ulang xray)
-- certv2ray (Perbarui Sertifikat / Update Certificate)
+- certv2ray/certxray (Perbarui Sertifikat / Update Certificate)
