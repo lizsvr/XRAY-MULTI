@@ -80,9 +80,9 @@ if [[ -z $cek ]]; then
 sed -i "s/$none/$none1/g" /etc/nginx/conf.d/xray.conf
 # sed -i "s/$none/$none1/g" /etc/xray/config.json
 sed -i "s/   - XRAYS TROJAN WS HTTP       : $none/   - XRAYS TROJAN WS HTTP       : $none1/g" /root/log-install.txt
-sed -i "s/   - XRAYS SHADOWSOCKS WS HTTP  : $none/   - XRAYS TROJAN WS HTTP       : $none1/g" /root/log-install.txt
-sed -i "s/   - XRAYS VLESS WS HTTP        : $none/   - XRAYS TROJAN WS HTTP       : $none1/g" /root/log-install.txt
-sed -i "s/   - XRAYS VMESS WS HTTP        : $none/   - XRAYS TROJAN WS HTTP       : $none1/g" /root/log-install.txt
+sed -i "s/   - XRAYS SHADOWSOCKS WS HTTP  : $none/   - XRAYS SHADOWSOCKS WS HTTP       : $none1/g" /root/log-install.txt
+sed -i "s/   - XRAYS VLESS WS HTTP        : $none/   - XRAYS VLESS WS HTTP       : $none1/g" /root/log-install.txt
+sed -i "s/   - XRAYS VMESS WS HTTP        : $none/   - XRAYS VMESS WS HTTP       : $none1/g" /root/log-install.txt
 iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport $none -j ACCEPT
 iptables -D INPUT -m state --state NEW -m udp -p udp --dport $none -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport $none1 -j ACCEPT
