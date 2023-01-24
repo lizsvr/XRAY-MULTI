@@ -16,17 +16,17 @@ cd
 error1="${RED} [ERROR] ${NC}"
 success="${GREEN} [OK] ${NC}"
 # Cek Domain
-source /var/lib/akbarstorevpn/ipvps.conf
-if [[ "$IP" = "" ]]; then
-  clear
-  echo -e " ${error1}Gagal Install-Xray.."
-  sleep 2
-  exit 0
-else
-  clear
-  echo -e "${success}Installasi Xray..."
-  sleep 2
-fi
+# source /var/lib/akbarstorevpn/ipvps.conf
+# if [[ "$IP" = "" ]]; then
+#   clear
+#   echo -e " ${error1}Gagal Install-Xray.."
+#   sleep 2
+#   exit 0
+# else
+#   clear
+#   echo -e "${success}Installasi Xray..."
+#   sleep 2
+# fi
 
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
