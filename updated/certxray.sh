@@ -31,16 +31,13 @@ domain=$IP
 systemctl enable xray.service
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 cd /root/
-wget -O acme.sh https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
+curl https://get.acme.sh | sh
 bash acme.sh --install
-rm acme.sh
 cd .acme.sh
-echo "starting...., Port 80 Akan di Hentikan Saat Proses install Cert"
-bash acme.sh --set-default-ca-server --server letsencrypt
+bash acme.sh --set-default-ca --server letsencrypt
 bash acme.sh --register-account -m senowahyu62@gmail.com
 bash acme.sh --issue -d $domain1 --standalone
 bash acme.sh --installcert -d $domain1 --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
 sleep 3
-clear
 restart-xray
 
