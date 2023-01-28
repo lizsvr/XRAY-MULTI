@@ -41,16 +41,16 @@ echo -e "========================="
 sleep 3
 
 # Cek DNS terubung dengan VPS atau tidak
-cekdomain=$(curl -sm8 http://ipget.net/?ip="${domain1}")
-if [[ ${MYIP} == ${cekdomain} ]]; then
-    echo -e "${success}Domain: ${BLUE}${domain1} ${NC}Terhubung dengan IP VPS"
-    sleep 3
-    clear
-else
-    echo -e "${error1}Domain: ${RED}${domain1} ${NC}Tidak Terhubung dengan IP VPS"
-    sleep 3
-    exit 0
-fi
+# cekdomain=$(curl -sm8 http://ipget.net/?ip="${domain1}")
+# if [[ ${MYIP} == ${cekdomain} ]]; then
+#     echo -e "${success}Domain: ${BLUE}${domain1} ${NC}Terhubung dengan IP VPS"
+#     sleep 3
+#     clear
+# else
+#     echo -e "${error1}Domain: ${RED}${domain1} ${NC}Tidak Terhubung dengan IP VPS"
+#     sleep 3
+#     exit 0
+# fi
 # done
 # Delete Files
 rm -f /etc/xray/xray.crt
