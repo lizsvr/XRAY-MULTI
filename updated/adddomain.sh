@@ -36,7 +36,7 @@ clear
 echo -e "========================="
 read -rp "Input Domain/Host : " -e domain1
 echo -e "========================="
-echo -e "Checking Domain: ${BLUE}${domain1} ${NC}Please Wait..."
+echo -e "Domain di tambahkan: ${BLUE}${domain1} ${NC}Please Wait..."
 echo -e "========================="
 sleep 3
 
@@ -51,7 +51,7 @@ sleep 3
 #     echo -e "${error1}Domain: ${BLUE}${domain1} ${NC}Tidak Terhubung dengan IP VPS"
 #     sleep 3
 #     exit 0
-fi
+#fi
 # done
 # Delete Files
 rm -f /etc/xray/xray.crt
@@ -79,11 +79,10 @@ chronyc tracking -v
 mkdir -p /etc/xray
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 cd /root/
-wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
+curl https://get.acme.sh | sh
 bash acme.sh --install
-rm acme.sh
 cd .acme.sh
-bash acme.sh --set-default-ca-server --server letsencrypt
+bash acme.sh --set-default-ca --server letsencrypt
 bash acme.sh --register-account -m senowahyu62@gmail.com
 bash acme.sh --issue -d $domain1 --standalone
 bash acme.sh --installcert -d $domain1 --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
