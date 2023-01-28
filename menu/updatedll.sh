@@ -118,4 +118,6 @@ chmod +x chngedomain
 chmod +x chngeport
 chmod +x xp
 
+clear
+echo -e "Update Selesai..."
 cd
