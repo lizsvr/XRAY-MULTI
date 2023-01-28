@@ -32,6 +32,10 @@ domain=$(cat /etc/xray/domain)
 else
 domain=$IP
 fi
+# Delete Files
+rm -f /etc/xray/xray.crt
+rm -f /etc/xray/xray.key
+
 systemctl enable xray.service
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 cd /root/
@@ -40,7 +44,7 @@ bash acme.sh --install
 cd .acme.sh
 bash acme.sh --set-default-ca --server letsencrypt
 bash acme.sh --register-account -m senowahyu62@gmail.com
-bash acme.sh --issue -d $domain --standalone --force
+bash acme.sh --issue --standalone -d $domain--force
 bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
 sleep 3
 restart-xray
